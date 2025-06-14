@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mundo Canino</title>
+  <style>
+    /* Paleta natural: tonos tierra, verdes y grises */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #bd9545;
+      color: #333;
+    }
+
+    header {
+      background-color: #4e342e;
+      color: rgba(215, 124, 124, 0.703);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #7d4c3c;
+      text-align: center;
+    }
+
+    .menu > li {
+      display: inline-block;
+      position: relative;
+    }
+
+    .menu > li > a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: rgb(49, 35, 2);
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #27130c;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .menu li:hover .submenu {
+      display: block;
+    }
+
+    .submenu li a {
+      padding: 10px 15px;
+      display: block;
+      color: rgb(83, 125, 153);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .img-principal {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      background-color: #e19940;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #a1887f;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #4e342e;
+      color: rgb(96, 106, 168);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #805050;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mundo Canino</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Razas</a>
+          <ul class="submenu">
+            <li><a href="pequeños.jfif">Pequeños</a></li>
+            <li><a href="medianos.jfif">Medianos</a></li>
+            <li><a href="grande.jfif">Grandes</a></li>
+          </ul>
+        </li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Por qué amamos a los perros?</h2>
+      <p>Los perros son animales que despiertan una gran admiración y afecto en las personas debido a su fidelidad, lealtad y capacidad de brindar amor incondicional. Su capacidad de adaptarse a la vida en familia y de formar un vínculo emocional profundo con sus dueños, así como su alegría y entusiasmo, contribuyen a que sean considerados compañeros leales y adorables. </p>
+      <img src="feliz.jfif" class="img-principal" alt="Perro feliz">
+      <img src="beso.jpeg" class="img-principal" alt="Perro dando beso">
+      <img src="amamos.jpeg" class="img-principal" alt="Perro abrazando">
+
+      <h3>Video: ¿Cómo cuidar a tu perro?</h3>
+      <video controls width="100%">
+        <source src="7 CONSEJOS para CUIDAR la SALUD de tu PERRO 🐶💚 - ExpertoAnimal (1080p, h264).mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+
+      <h3>Audio: Sonidos de perros</h3>
+      <audio controls>
+        <source src="Julieta Venegas - Limon Y Sal (Letra_Lyrics) - LatinNow.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+    </section>
+
+    <section id="pequenos">
+      <h2>Razas Pequeñas</h2>
+      <p>Perfectas para espacios pequeños y vida en apartamento.</p>
+      <ul>
+        <li>Chihuahua</li>
+        <li>Pomerania</li>
+        <li>Yorkshire Terrier</li>
+      </ul>
+      <img src="pequeños.jfif" class="img-principal" alt="Perro pequeño">
+    </section>
+
+    <section id="medianos">
+      <h2>Razas Medianas</h2>
+      <p>Equilibrio ideal entre energía y tamaño.</p>
+      <ul>
+        <li>Beagle</li>
+        <li>Border Collie</li>
+        <li>Bulldog</li>
+      </ul>
+      <img src="medianos.jfif" class="img-principal" alt="Perro mediano">
+    </section>
+
+    <section id="grandes">
+      <h2>Razas Grandes</h2>
+      <p>Impresionantes, protectores y nobles.</p>
+      <ul>
+        <li>Labrador Retriever</li>
+        <li>Pastor Alemán</li>
+        <li>Gran Danés</li>
+      </ul>
+      <img src="grande.jfif" class="img-principal" alt="Perro grande">
+    </section>
+
+    <section id="galeria">
+      <h2>Galería de Perros</h2>
+      <div class="galeria">
+        <img src="cachorro feliz.jfif" alt="Cachorro feliz">
+        <img src="corriendo.jfif" alt="Perro corriendo">
+        <img src="jugando.jfif" alt="Perro jugando">
+        <img src="descansando.jfif" alt="Perro descansando">
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mundo Canino | <a href="https://es.wikipedia.org/wiki/Perro" target="_blank">Más sobre perros</a></p>
+  </footer>
+</body>
+</html>
